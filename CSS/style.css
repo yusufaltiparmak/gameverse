@@ -203,3 +203,16 @@ iframe {
   border: none;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+/* Buton yüksekliklerini eşitleme */
+.btn {
+  height: 38px; /* Veya istediğiniz sabit yükseklik */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Özel butonlar için ek ayar */
+#showGamesBtn, .btn-secondary {
+  height: 38px;
+  line-height: normal; /* Yazıyı düzgün hizalamak için */
+}
