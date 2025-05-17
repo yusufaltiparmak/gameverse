@@ -194,3 +194,24 @@ window.addEventListener("load", function () {
     colorBtn.style.height = maxHeight + "px";
   }
 });
+
+// Buton yüksekliklerini eşitleme fonksiyonu
+function equalizeButtonHeights() {
+  const buttons = document.querySelectorAll('#showGamesBtn, .btn-secondary');
+  let maxHeight = 0;
+  
+  buttons.forEach(button => {
+    button.style.height = 'auto';
+    if (button.offsetHeight > maxHeight) {
+      maxHeight = button.offsetHeight;
+    }
+  });
+  
+  buttons.forEach(button => {
+    button.style.height = `${maxHeight}px`;
+  });
+}
+
+// Event listener'lar
+window.addEventListener('load', equalizeButtonHeights);
+window.addEventListener('resize', equalizeButtonHeights);
