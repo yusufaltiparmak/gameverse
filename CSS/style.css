@@ -1,48 +1,64 @@
+/* Temel Renk Değişkenleri */
+:root {
+  --primary-bg: #1b2838;
+  --primary-color: #c7d5e0;
+  --header-footer-bg: #34568B; /* Header rengi değiştirildi */
+  --accent-blue: #66c0f4;
+  --card-bg: #2a475e;
+  --light-bg: #f0f0f0;
+  --light-color: #333;
+  --light-header-footer-bg: #2a4b8d;
+  --light-card-bg: #fff;
+  --light-accent: #2a4b8d;
+  --hover-blue: #417a9b;
+  --gold: gold;
+}
+
 /* Ana tema stilleri */
 body {
-  background-color: #1b2838;
-  color: #c7d5e0;
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: all 0.3s ease;
 }
 
 /* Tema değiştirme */
 body.light-theme {
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: var(--light-bg);
+  color: var(--light-color);
 }
 
-body.light-theme header, 
+body.light-theme header,
 body.light-theme footer {
-  background-color: #2a4b8d;
+  background-color: var(--light-header-footer-bg);
 }
 
-body.light-theme h1, 
+body.light-theme h1,
 body.light-theme h2 {
-  color: #2a4b8d;
+  color: var(--light-header-footer-bg);
 }
 
 body.light-theme .game-card {
-  background-color: #fff;
-  color: #333;
+  background-color: var(--light-card-bg);
+  color: var(--light-color);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 body.light-theme .game-card:hover {
-  box-shadow: 0 0 10px #2a4b8d;
+  box-shadow: 0 0 10px var(--light-accent);
 }
 
 body.light-theme .btn-primary {
-  background-color: #2a4b8d;
+  background-color: var(--light-accent);
 }
 
 body.light-theme .btn-primary:hover {
   background-color: #1a3366;
 }
 
-/* Header stilleri */
+/* Header ve Footer stilleri */
 header, footer {
-  background-color: #171a21;
+  background-color: var(--header-footer-bg); /* Renk güncellendi */
 }
 
 header {
@@ -53,62 +69,111 @@ header {
 
 /* Başlık stilleri */
 h1, h2 {
-  color: #66c0f4;
+  color: var(--accent-blue);
   margin-bottom: 1.5rem;
 }
 
 /* Link stilleri */
 a {
-  color: #c7d5e0;
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: #66c0f4;
+a:hover,
+a:focus {
+  color: var(--accent-blue);
   text-decoration: underline;
+  outline: none;
 }
 
 /* Oyun kartı stilleri */
 .game-card {
-  background-color: #2a475e;
+  background-color: var(--card-bg);
   border: none;
   color: #fff;
   transition: all 0.3s ease;
   margin-bottom: 20px;
   height: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.game-card:hover {
-  box-shadow: 0 0 10px #66c0f4;
+.game-card:hover,
+.game-card:focus-within {
+  box-shadow: 0 0 10px var(--accent-blue);
   transform: translateY(-5px);
 }
 
 .game-card img {
+  width: 100%;
   max-height: 200px;
   object-fit: cover;
+  display: block;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /* Buton stilleri */
 .btn-primary {
-  background-color: #66c0f4;
+  background-color: var(--accent-blue);
   border: none;
-  transition: background-color 0.3s ease;
+  color: #171a21;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s;
+  outline: none;
+  height: 40px; /* Yükseklik standart */
+  min-width: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-primary:hover {
-  background-color: #417a9b;
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--hover-blue);
+  box-shadow: 0 2px 8px rgba(102,192,244,0.2);
+}
+
+/* Oyun gizle/göster butonu yükseklik eşitliği */
+#showGamesBtn {
+  margin-bottom: 20px;
+  height: 40px; /* .btn-primary ile eşit */
+  min-width: 100px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  background: var(--accent-blue);
+  color: #171a21;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+#showGamesBtn:hover,
+#showGamesBtn:focus {
+  background: var(--hover-blue);
 }
 
 /* Tablo stilleri */
 .table-dark {
-  background-color: #2a475e;
+  background-color: var(--card-bg);
+  color: #fff;
 }
 
 /* iFrame stilleri */
 iframe {
   border: none;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  width: 100%;
+  min-height: 300px;
 }
 
 /* Küçük ekran için oyun kartı stilleri */
@@ -121,15 +186,17 @@ iframe {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #66c0f4;
+  background-color: var(--accent-blue);
   color: white;
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 1;
 }
 
 .rating {
-  color: gold;
+  color: var(--gold);
   font-size: 1.2rem;
 }
 
@@ -138,26 +205,31 @@ iframe {
   background-color: rgba(42, 71, 94, 0.5);
   padding: 20px;
   border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 #iletisimForm label {
-  color: #66c0f4;
+  color: var(--accent-blue);
 }
 
 #iletisimForm .form-control {
   background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid #66c0f4;
+  border: 1px solid var(--accent-blue);
   color: #fff;
+  border-radius: 5px;
+  transition: box-shadow 0.2s;
 }
 
 #iletisimForm .form-control:focus {
-  box-shadow: 0 0 5px #66c0f4;
+  box-shadow: 0 0 5px var(--accent-blue);
+  outline: none;
 }
 
 /* Sayaç */
 #counter-container {
-  background-color: #66c0f4;
-  color: #171a21;
+  background-color: var(--accent-blue);
+  color: var(--header-footer-bg);
   font-weight: bold;
   padding: 5px 10px;
   border-radius: 5px;
@@ -168,18 +240,42 @@ iframe {
 #themeSwitcher {
   cursor: pointer;
   padding: 5px 10px;
-  background-color: #66c0f4;
-  color: #171a21;
+  background-color: var(--accent-blue);
+  color: var(--header-footer-bg);
   border-radius: 5px;
   font-weight: bold;
+  border: none;
+  transition: background 0.2s;
 }
 
-/* Görünürlük kontrol butonu */
-#showGamesBtn {
-  margin-bottom: 20px;
+#themeSwitcher:hover,
+#themeSwitcher:focus {
+  background-color: var(--hover-blue);
 }
 
 /* Footer stilleri */
 footer {
   margin-top: 50px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Responsive iyileştirme */
+@media (max-width: 768px) {
+  .game-card {
+    margin-bottom: 15px;
+  }
+  #iletisimForm {
+    padding: 10px;
+  }
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+  .btn-primary, #showGamesBtn {
+    height: 36px;
+    font-size: 1rem;
+    min-width: 90px;
+    padding: 6px 10px;
+  }
 }
