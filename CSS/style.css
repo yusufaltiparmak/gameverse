@@ -2,6 +2,22 @@
 /* Ana Tema (Koyu) ve Genel Stil  */
 /* =============================== */
 
+/* Buton stilleri */
+.btn {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 8px 16px;
+  line-height: 1.2;
+}
+
+/* Buton container'ı */
+.row.mb-4 {
+  align-items: center;
+}
+
 body {
   background-color: #1b2838;
   color: #c7d5e0;
