@@ -48,19 +48,19 @@ $(document).ready(function() {
     const dummyData = [
       {
         "name": "Stellar Odyssey",
-        "image": "IMG/game1.jpg",
+        "image": "IMG/game4.jpg",
         "description": "Uzay macerası dolu stratejik bir keşif oyunu.",
         "type": "Strateji"
       },
       {
         "name": "City Builder Pro",
-        "image": "IMG/game2.jpg",
+        "image": "IMG/game5.jpg",
         "description": "Kendi şehrini inşa et ve yönet.",
         "type": "Simülasyon"
       },
       {
         "name": "Dungeon Master",
-        "image": "IMG/game1.jpg", 
+        "image": "IMG/game6.jpg", 
         "description": "Zindanlarda ilerle ve efsanevi hazineleri keşfet.",
         "type": "RPG"
       }
