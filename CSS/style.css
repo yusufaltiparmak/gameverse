@@ -178,6 +178,13 @@ iframe {
 #showGamesBtn {
   margin-bottom: 20px;
 }
+/* Buton yüksekliği için eşitlik */
+#toggleGamesBtn, #changeHeaderColorBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
 
 /* Footer stilleri */
 footer {
