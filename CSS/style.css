@@ -1,8 +1,7 @@
-/* Temel Renk Değişkenleri */
 :root {
   --primary-bg: #1b2838;
   --primary-color: #c7d5e0;
-  --header-footer-bg: #34568B; /* Header rengi değiştirildi */
+  --header-footer-bg: #34568B; /* Header rengi */
   --accent-blue: #66c0f4;
   --card-bg: #2a475e;
   --light-bg: #f0f0f0;
@@ -48,17 +47,22 @@ body.light-theme .game-card:hover {
   box-shadow: 0 0 10px var(--light-accent);
 }
 
-body.light-theme .btn-primary {
+body.light-theme .btn-primary,
+body.light-theme #showGamesBtn,
+body.light-theme #themeSwitcher {
   background-color: var(--light-accent);
+  color: #fff;
 }
 
-body.light-theme .btn-primary:hover {
+body.light-theme .btn-primary:hover,
+body.light-theme #showGamesBtn:hover,
+body.light-theme #themeSwitcher:hover {
   background-color: #1a3366;
 }
 
 /* Header ve Footer stilleri */
 header, footer {
-  background-color: var(--header-footer-bg); /* Renk güncellendi */
+  background-color: var(--header-footer-bg);
 }
 
 header {
@@ -115,51 +119,46 @@ a:focus {
   border-bottom-right-radius: 10px;
 }
 
-/* Buton stilleri */
-.btn-primary {
+/* Butonların ortak stili - GÖSTER/GİZLE ve TEMA DEĞİŞTİR dahil */
+.btn-primary,
+#showGamesBtn,
+#themeSwitcher {
+  height: 44px;
+  min-width: 130px;
+  padding: 0 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
   background-color: var(--accent-blue);
-  border: none;
   color: #171a21;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 5px;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.2s;
-  outline: none;
-  height: 40px; /* Yükseklik standart */
-  min-width: 100px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  outline: none;
+  box-sizing: border-box;
+  margin-right: 8px;
 }
 
 .btn-primary:hover,
-.btn-primary:focus {
+.btn-primary:focus,
+#showGamesBtn:hover,
+#showGamesBtn:focus,
+#themeSwitcher:hover,
+#themeSwitcher:focus {
   background-color: var(--hover-blue);
+  color: #fff;
   box-shadow: 0 2px 8px rgba(102,192,244,0.2);
 }
 
-/* Oyun gizle/göster butonu yükseklik eşitliği */
 #showGamesBtn {
   margin-bottom: 20px;
-  height: 40px; /* .btn-primary ile eşit */
-  min-width: 100px;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-weight: bold;
-  background: var(--accent-blue);
-  color: #171a21;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s;
 }
 
-#showGamesBtn:hover,
-#showGamesBtn:focus {
-  background: var(--hover-blue);
+#themeSwitcher {
+  /* Ekstra stil gerekirse buraya ekleyebilirsin */
 }
 
 /* Tablo stilleri */
@@ -236,23 +235,6 @@ iframe {
   display: inline-block;
 }
 
-/* Tema değiştirme butonu */
-#themeSwitcher {
-  cursor: pointer;
-  padding: 5px 10px;
-  background-color: var(--accent-blue);
-  color: var(--header-footer-bg);
-  border-radius: 5px;
-  font-weight: bold;
-  border: none;
-  transition: background 0.2s;
-}
-
-#themeSwitcher:hover,
-#themeSwitcher:focus {
-  background-color: var(--hover-blue);
-}
-
 /* Footer stilleri */
 footer {
   margin-top: 50px;
@@ -272,10 +254,12 @@ footer {
   h1, h2 {
     font-size: 1.3rem;
   }
-  .btn-primary, #showGamesBtn {
-    height: 36px;
-    font-size: 1rem;
+  .btn-primary,
+  #showGamesBtn,
+  #themeSwitcher {
+    height: 38px;
     min-width: 90px;
-    padding: 6px 10px;
+    font-size: 0.95rem;
+    padding: 0 10px;
   }
 }
