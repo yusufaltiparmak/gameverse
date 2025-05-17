@@ -1,0 +1,185 @@
+/* Ana tema stilleri */
+body {
+  background-color: #1b2838;
+  color: #c7d5e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Tema değiştirme */
+body.light-theme {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+body.light-theme header, 
+body.light-theme footer {
+  background-color: #2a4b8d;
+}
+
+body.light-theme h1, 
+body.light-theme h2 {
+  color: #2a4b8d;
+}
+
+body.light-theme .game-card {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body.light-theme .game-card:hover {
+  box-shadow: 0 0 10px #2a4b8d;
+}
+
+body.light-theme .btn-primary {
+  background-color: #2a4b8d;
+}
+
+body.light-theme .btn-primary:hover {
+  background-color: #1a3366;
+}
+
+/* Header stilleri */
+header, footer {
+  background-color: #171a21;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Başlık stilleri */
+h1, h2 {
+  color: #66c0f4;
+  margin-bottom: 1.5rem;
+}
+
+/* Link stilleri */
+a {
+  color: #c7d5e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #66c0f4;
+  text-decoration: underline;
+}
+
+/* Oyun kartı stilleri */
+.game-card {
+  background-color: #2a475e;
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.game-card:hover {
+  box-shadow: 0 0 10px #66c0f4;
+  transform: translateY(-5px);
+}
+
+.game-card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Buton stilleri */
+.btn-primary {
+  background-color: #66c0f4;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #417a9b;
+}
+
+/* Tablo stilleri */
+.table-dark {
+  background-color: #2a475e;
+}
+
+/* iFrame stilleri */
+iframe {
+  border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Küçük ekran için oyun kartı stilleri */
+.game-card.small-screen {
+  margin-bottom: 10px;
+}
+
+/* Özel bileşenler */
+.featured-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #66c0f4;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.rating {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+/* İletişim formu */
+#iletisimForm {
+  background-color: rgba(42, 71, 94, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#iletisimForm label {
+  color: #66c0f4;
+}
+
+#iletisimForm .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #66c0f4;
+  color: #fff;
+}
+
+#iletisimForm .form-control:focus {
+  box-shadow: 0 0 5px #66c0f4;
+}
+
+/* Sayaç */
+#counter-container {
+  background-color: #66c0f4;
+  color: #171a21;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Tema değiştirme butonu */
+#themeSwitcher {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #66c0f4;
+  color: #171a21;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Görünürlük kontrol butonu */
+#showGamesBtn {
+  margin-bottom: 20px;
+}
+
+/* Footer stilleri */
+footer {
+  margin-top: 50px;
+}
