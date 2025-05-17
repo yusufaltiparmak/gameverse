@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="./CSS/style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./JS/scripts.js" defer></script>
+  <script>
+    $(document).ready(function () {
+      $('#changeHeaderColorBtn').click(function () {
+        changeHeaderColor();
+      });
+    });
+  </script>
 </head>
 <body>
   <!-- Header bölümü -->
@@ -27,10 +34,7 @@
       <div id="themeSwitcher">Tema Değiştir</div>
     </div>
   </header>
-
-  <!-- Ana içerik -->
-  <main class="container mt-4">
-    <!-- Kontrol Bölümü -->
+<!-- Kontrol Bölümü -->
     <div class="row mb-4">
       <div class="col-12">
         <button id="showGamesBtn" class="btn btn-primary">Oyunları Göster/Gizle</button>
@@ -269,6 +273,18 @@
         </div>
       </div>
     </section>
+  </main>
+  <!-- Ana içerik -->
+  <main class="container mt-4">
+    <!-- Kontrol Bölümü -->
+    <div class="row mb-4">
+      <div class="col-12 d-flex gap-2">
+        <button id="showGamesBtn" class="btn btn-primary">Oyunları Göster/Gizle</button>
+        <button id="changeHeaderColorBtn" class="btn btn-primary">Header Renk Değiştir</button>
+      </div>
+    </div>
+
+    <!-- (Diğer içerikler aynı kalır) -->
   </main>
 
   <!-- Footer -->
