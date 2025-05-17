@@ -186,8 +186,8 @@ window.onresize = checkScreenSize;
 
 // Header buton yüksekliği eşitleme
 window.addEventListener("load", function () {
-  const toggleBtn = document.getElementById("toggleGamesBtn");
-  const colorBtn = document.getElementById("changeHeaderColorBtn");
+  const toggleBtn = document.getElementById("showGamesBtn");
+  const colorBtn = document.querySelector("button[onclick='changeHeaderColor()']");
   if (toggleBtn && colorBtn) {
     const maxHeight = Math.max(toggleBtn.offsetHeight, colorBtn.offsetHeight);
     toggleBtn.style.height = maxHeight + "px";
