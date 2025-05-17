@@ -255,3 +255,13 @@ window.onload = function() {
   showNotification("GameVerse'e Hoş Geldiniz!", "success");
 };
 window.onresize = checkScreenSize;
+window.addEventListener("load", function () {
+    const toggleBtn = document.getElementById("toggleGamesBtn");
+    const colorBtn = document.getElementById("changeHeaderColorBtn");
+
+    if (toggleBtn && colorBtn) {
+        const maxHeight = Math.max(toggleBtn.offsetHeight, colorBtn.offsetHeight);
+        toggleBtn.style.height = maxHeight + "px";
+        colorBtn.style.height = maxHeight + "px";
+    }
+});
