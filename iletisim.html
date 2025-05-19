@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim - GameVerse</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./JS/scripts.js" defer></script>
+</head>
+<body>
+  
+  <header class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <h1 class="m-0">GameVerse</h1>
+      <div class="ms-3" id="counter-container">
+        <span>Ziyaretçi sayacı: </span>
+        <span id="counter">0</span>
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <nav class="me-3">
+        <a class="text-white mx-2" href="index.html">Ana Sayfa</a>
+        <a class="text-white mx-2" href="iletisim.html">İletişim</a>
+      </nav>
+      <div id="themeSwitcher">Tema Değiştir</div>
+    </div>
+  </header>
+ 
+  <main class="container mt-4">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="card game-card p-4">
+          <div class="card-body">
+            <h2>İletişim Formu</h2>
+            <p><span>Bizimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz.</span></p>
+            <form id="iletisimForm">
+              
+              <div class="row mb-4">
+                <div class="col-12">
+                  <h5><span>Kişisel Bilgiler</span></h5>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><span>Adınız</span></label>
+                    <input type="text" class="form-control" id="ad" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><span>Soyadınız</span></label>
+                    <input type="text" class="form-control" id="soyad" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><span>E-posta</span></label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><span>Telefon</span></label>
+                    <input type="tel" class="form-control" id="telefon">
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="row mb-4">
+                <div class="col-12">
+                  <h5><span>İlgi Alanları</span></h5>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><span>Oyun Türü</span></label>
+                    <select class="form-select" id="oyunTuru">
+                      <option value="">Seçiniz</option>
+                      <option value="RPG">RPG</option>
+                      <option value="Aksiyon">Aksiyon</option>
+                      <option value="Yarış">Yarış</option>
+                      <option value="Simülasyon">Simülasyon</option>
+                      <option value="Strateji">Strateji</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><span>Favori Platform</span></label><br>
+                    <div class="form-check form-check-inline">
+                      <input type="radio" class="form-check-input" name="platform" id="platformPC" value="PC">
+                      <label class="form-check-label" for="platformPC"><span>PC</span></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input type="radio" class="form-check-input" name="platform" id="platformKonsol" value="Konsol">
+                      <label class="form-check-label" for="platformKonsol"><span>Konsol</span></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input type="radio" class="form-check-input" name="platform" id="platformMobil" value="Mobil">
+                      <label class="form-check-label" for="platformMobil"><span>Mobil</span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="form-label"><span>İlgilendiğiniz Oyunlar</span></label>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="oyun1" name="ilgilenilenOyun" value="RPG Quest">
+                          <label class="form-check-label" for="oyun1"><span>RPG Quest</span></label>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="oyun2" name="ilgilenilenOyun" value="Speed Racer">
+                          <label class="form-check-label" for="oyun2"><span>Speed Racer</span></label>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="oyun3" name="ilgilenilenOyun" value="Galactic Wars">
+                          <label class="form-check-label" for="oyun3"><span>Galactic Wars</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="row mb-4">
+                <div class="col-12">
+                  <h5><span>Mesaj Bilgileri</span></h5>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="form-label"><span>Konu</span></label>
+                    <input type="text" class="form-control" id="konu">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="form-label"><span>Mesajınız</span></label>
+                    <textarea class="form-control" id="mesaj" rows="4" required></textarea>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><span>Dosya Ekle</span></label>
+                    <input type="file" class="form-control" id="dosya">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><span>Öncelik</span></label>
+                    <select class="form-select" id="oncelik">
+                      <option value="normal">Normal</option>
+                      <option value="yuksek">Yüksek</option>
+                      <option value="acil">Acil</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="row mb-4">
+                <div class="col-12">
+                  <h5><span>Tercihler</span></h5>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="haberBulteni" name="abone">
+                      <label class="form-check-label" for="haberBulteni"><span>Haber bültenine abone olmak istiyorum</span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="kampanyaHaberleri">
+                      <label class="form-check-label" for="kampanyaHaberleri"><span>Kampanya haberlerini almak istiyorum</span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><span>İletişim Tercihi</span></label>
+                    <select class="form-select" id="iletisimTercihi">
+                      <option value="email">E-posta</option>
+                      <option value="telefon">Telefon</option>
+                      <option value="her-ikisi">Her İkisi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><span>Şifre (Portal Kaydı İçin)</span></label>
+                    <input type="password" class="form-control" id="sifre">
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="row">
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Gönder</button>
+                  <button type="reset" class="btn btn-secondary ms-2">Temizle</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="row mt-4">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="card game-card">
+          <div class="card-body">
+            <h2>İletişim Bilgilerimiz</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <h5><span>Adres</span></h5>
+                <p>
+                  <span>GameVerse Merkez Ofis</span><br>
+                  <span>Teknoloji Vadisi, 34. Sokak No: 42</span><br>
+                  <span>Ankara / Türkiye</span>
+                </p>
+              </div>
+              <div class="col-md-6">
+                <h5><span>İletişim</span></h5>
+                <p>
+                  <span><strong>Telefon:</strong> +90 555 123 4567</span><br>
+                  <span><strong>E-posta:</strong> info@gameverse.com</span><br>
+                  <span><strong>Çalışma Saatleri:</strong> Hafta içi 09:00-18:00</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="row mt-4 mb-4">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="card game-card">
+          <div class="card-body">
+            <h2>Konum</h2>
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196237.5081572927!2d32.62263035!3d39.90303495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f190a9cea8f%3A0xb701789394b697f3!2sAnkara!5e0!3m2!1str!2str!4v1652095847892!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  
+  <footer class="bg-dark text-center text-white p-3 mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5><span>Hızlı Erişim</span></h5>
+          <div>
+            <span><a class="text-white" href="index.html">Ana Sayfa</a></span>
+          </div>
+          <div>
+            <span><a class="text-white" href="iletisim.html">İletişim</a></span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5><span>Kategoriler</span></h5>
+          <div>
+            <span>RPG</span>
+          </div>
+          <div>
+            <span>Yarış</span>
+          </div>
+          <div>
+            <span>Aksiyon</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5><span>İletişim</span></h5>
+          <div>
+            <span>info@gameverse.com</span>
+          </div>
+          <div>
+            <span>+90 555 123 4567</span>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <span>&copy; 2025 GameVerse</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

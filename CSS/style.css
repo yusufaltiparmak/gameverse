@@ -1,0 +1,265 @@
+:root {
+  --primary-bg: #1b2838;
+  --primary-color: #c7d5e0;
+  --header-footer-bg: #34568B; 
+  --accent-blue: #66c0f4;
+  --card-bg: #2a475e;
+  --light-bg: #f0f0f0;
+  --light-color: #333;
+  --light-header-footer-bg: #2a4b8d;
+  --light-card-bg: #fff;
+  --light-accent: #2a4b8d;
+  --hover-blue: #417a9b;
+  --gold: gold;
+}
+
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+
+body.light-theme {
+  background-color: var(--light-bg);
+  color: var(--light-color);
+}
+
+body.light-theme header,
+body.light-theme footer {
+  background-color: var(--light-header-footer-bg);
+}
+
+body.light-theme h1,
+body.light-theme h2 {
+  color: var(--light-header-footer-bg);
+}
+
+body.light-theme .game-card {
+  background-color: var(--light-card-bg);
+  color: var(--light-color);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body.light-theme .game-card:hover {
+  box-shadow: 0 0 10px var(--light-accent);
+}
+
+body.light-theme .btn-primary,
+body.light-theme #showGamesBtn,
+body.light-theme #themeSwitcher {
+  background-color: var(--light-accent);
+  color: #fff;
+}
+
+body.light-theme .btn-primary:hover,
+body.light-theme #showGamesBtn:hover,
+body.light-theme #themeSwitcher:hover {
+  background-color: #1a3366;
+}
+
+
+header, footer {
+  background-color: var(--header-footer-bg);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+h1, h2 {
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+}
+
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  outline: none;
+}
+
+
+.game-card {
+  background-color: var(--card-bg);
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.game-card:hover,
+.game-card:focus-within {
+  box-shadow: 0 0 10px var(--accent-blue);
+  transform: translateY(-5px);
+}
+
+.game-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.btn-primary,
+#showGamesBtn,
+#themeSwitcher {
+  height: 44px;
+  min-width: 130px;
+  padding: 0 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: var(--accent-blue);
+  color: #171a21;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  outline: none;
+  box-sizing: border-box;
+  margin-right: 8px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+#showGamesBtn:hover,
+#showGamesBtn:focus,
+#themeSwitcher:hover,
+#themeSwitcher:focus {
+  background-color: var(--hover-blue);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(102,192,244,0.2);
+}
+
+#showGamesBtn {
+  margin-bottom: 20px;
+}
+
+#themeSwitcher {
+  
+}
+
+
+.table-dark {
+  background-color: var(--card-bg);
+  color: #fff;
+}
+
+
+iframe {
+  border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  width: 100%;
+  min-height: 300px;
+}
+
+
+.game-card.small-screen {
+  margin-bottom: 10px;
+}
+
+
+.featured-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--accent-blue);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.rating {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+
+#iletisimForm {
+  background-color: rgba(42, 71, 94, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#iletisimForm label {
+  color: var(--accent-blue);
+}
+
+#iletisimForm .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--accent-blue);
+  color: #fff;
+  border-radius: 5px;
+  transition: box-shadow 0.2s;
+}
+
+#iletisimForm .form-control:focus {
+  box-shadow: 0 0 5px var(--accent-blue);
+  outline: none;
+}
+
+
+#counter-container {
+  background-color: var(--accent-blue);
+  color: var(--header-footer-bg);
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+
+@media (max-width: 768px) {
+  .game-card {
+    margin-bottom: 15px;
+  }
+  #iletisimForm {
+    padding: 10px;
+  }
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+  .btn-primary,
+  #showGamesBtn,
+  #themeSwitcher {
+    height: 38px;
+    min-width: 90px;
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+}
